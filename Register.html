@@ -1,0 +1,168 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {font-family: "Times New Roman",Times,Serif,30;
+	
+		background-image: url("p98.png");
+		
+		}
+.form{  background:#ffffff;
+  padding: 20px;
+  max-width: 600px;
+  margin: 40px auto;
+
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);}
+
+.container {
+    padding: 16px;
+    
+}
+input, input {
+    width: 100%;
+    padding: 15px;
+    margin: 2px 10px 10px ;
+ 
+    border: none;
+    background: skyblue;
+}
+
+input:focus, input:focus {
+    background-color: pink;
+    outline: none;
+}
+
+
+/* Set a style for all buttons */
+.registerbtn {
+    background-color: green;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: 1px;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.registerbtn:hover {
+    opacity:1;
+	background-color:red;
+}
+
+/* Add a blue text color to links */
+a {
+    color: darkred;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+    background-color: #f1f1f1;
+    text-align: center;
+}
+<!--.e{
+padding-top:solid;
+padding-bottom:50px;
+padding-left:120px;
+padding-right:60px;
+
+}-->
+
+#password-strength-status {
+padding: 5px 10px;color: #FFFFFF; border-radius:4px;margin-top:5px;
+}
+.medium-password{
+background-color: #b7d60a;border:#BBB418 1px solid;
+}
+.weak-password{
+background-color: #ce1d14;border:#AA4502 1px solid;
+}
+.strong-password{
+background-color: #12CC1A;border:#0FA015 1px solid;
+}
+</style>
+
+<body>
+<div class="form">
+
+<form style="border:5px solid lightgreen" action="insert">
+  <div class="container">
+    <h1><span style="color:blue">Register</span></h1>
+    <p><span style="color:lightblack ">Please fill in this form to create an account.</span></p>
+	<input type="text" placeholder="Enter Name" name="name" id="name1" required>
+	<input type="email" placeholder="Enter Email" name="email" id="email1" onblur="check()" required>
+	<span id="disp"></span>
+	<input type="password" placeholder="Enter password in number" name="psw" id="password" class="demoInputBox" onKeyUp="checkPasswordStrength();" required><div id="password-strength-status"></div>
+	<input type="password" placeholder="Repeat Password in number" name="repeat" id="password2" onblur="check1()" required>
+	<span id="view"></span>
+	
+    <p>By creating an account you agree to our <a href="#"><span style="">Terms & Privacy</a>.</p>
+	
+    <button type="submit" class="registerbtn" >Register</button>
+	<span id="d"></span>
+	
+  </div>
+  
+  <div class="container signin">
+    <p>Already have an account? <a href="login1.jsp">Sign in</a>.</p>
+  </div>
+</form>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+function checkPasswordStrength() {
+var number = /([0-9])/;
+var alphabets = /([a-zA-Z])/;
+var special_characters = /([~,!,@,#,$,%,^,&,*,-,_,+,=,?,>,<])/;
+if($('#password').val().length<6) {
+$('#password-strength-status').removeClass();
+$('#password-strength-status').addClass('weak-password');
+$('#password-strength-status').html("Weak (should be atleast 6 characters.)");
+} 
+else 
+{ 
+if($('#password').val().match(number) && $('#password').val().match(alphabets) && $('#password').val().match(special_characters)) { 
+$('#password-strength-status').removeClass();
+$('#password-strength-status').addClass('strong-password');
+$('#password-strength-status').html("Strong");
+} 
+else
+{
+$('#password-strength-status').removeClass();
+$('#password-strength-status').addClass('medium-password');
+$('#password-strength-status').html("Medium (should include alphabets, numbers and special characters.)");
+}}
+}
+</script>
+<script type="text/javascript">
+
+		function check1()
+		{
+			var p1=document.getElementById("password1").value;
+			var p2=document.getElementById("password2").value;
+				if(p2==p1)
+				{
+					document.getElementById("view").innerHTML="Password Matched";
+					
+				}
+				else
+					document.getElementById("view").innerHTML="Password Do not Match";
+					
+			
+		}
+		function check()
+		{
+			var e=document.getElementById("email1").value;
+			var reg=/^([a-z0-9_\+-]+)(\.[a-z0-9_\+-]+)*@([a-z]+)(\.[a-z]+)*(\.[a-z]{2,4})$/
+				if(reg.test(e))
+				{
+					
+					document.getElementById("disp").innerHTML="Email is Correct";
+				}
+				else
+					document.getElementById("disp").innerHTML="Email is not correct";
+		}
+	
+
+</script>
+</html>

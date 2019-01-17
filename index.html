@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+ <meta name="author" content="Prashant" >
+ <!-- Start WOWSlider.com HEAD section -->
+<link rel="stylesheet" type="text/css" href="slider/engine1/style.css" />
+<script type="text/javascript" src="slider/engine1/jquery.js"></script>
+<!-- End WOWSlider.com HEAD section -->
+ </head>
+<style>
+body {margin:0;
+
+background-color:   #d9e6e6
+;}
+
+.navbar {
+  overflow: hidden;
+  background-color: #ff1744;  
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #ff1744;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #ff1744;
+  color: white;
+}
+
+.navbar .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {display: none;}
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    bottom:0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+}
+<!--/// differce from bottom Navigation and distributed -->
+.c{
+position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  background-color: #ff1744;
+  border: 2px solid #4CAF50;}
+body {margin: 0;}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:  #ff4081;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+ul li a {
+	margin-right:2px;
+	
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #4CAF50;}
+
+ul.topnav li.right {float: right;background-color: #111;}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+}
+</style>
+</head>
+<body>
+<div class="c">
+<ul class="topnav">
+<li><a href="index.html"><image src="SLW.jpg" height="50px" width="60px"></a></li>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="bbcnews.com" class="active">SocialWelfareNews</a></li>
+   <li><a class="active" href="labour.html">LabourRegisteration</a></li>
+  <!--  <li><a href="emp.jsp" class="active">search Labour and address</a></li>-->
+  <li class="right"><a href="Register.html">SignUp</a></li>
+  <li class="right"><a href="login1.jsp">Login</a></li>
+</ul>
+</div>
+<div>
+
+<marquee   scrolldelay="30">new news is coming for Worker!!!!</marquee>
+</div>
+
+<div>
+<!-- Start WOWSlider.com BODY section -->
+<div id="wowslider-container1">
+<div class="ws_images"><ul>
+		<li><a href="www.errtg.cmo"><img src="slider/data1/images/pic1.jpg" alt="easy farming" title="easy farming" id="wows1_0"/></a></li>
+		<li><img src="slider/data1/images/pic2.jpg" alt="pic2" title="pic2" id="wows1_1"/></li>
+		<li><img src="slider/data1/images/pic3.jpg" alt="pic3" title="pic3" id="wows1_2"/></li>
+		<li><a href="http://wowslider.net"><img src="slider/data1/images/pic4.jpg" alt="bootstrap carousel" title="pic4" id="wows1_3"/></a></li>
+		<li><img src="slider/data1/images/slw.jpg" alt="slw" title="slw" id="wows1_4"/></li>
+	</ul></div>
+	<div class="ws_bullets"><div>
+		<a href="#" title="easy farming"><span><img src="slider/data1/tooltips/pic1.jpg" alt="easy farming"/>1</span></a>
+		<a href="#" title="pic2"><span><img src="slider/data1/tooltips/pic2.jpg" alt="pic2"/>2</span></a>
+		<a href="#" title="pic3"><span><img src="slider/data1/tooltips/pic3.jpg" alt="pic3"/>3</span></a>
+		<a href="#" title="pic4"><span><img src="slider/data1/tooltips/pic4.jpg" alt="pic4"/>4</span></a>
+		<a href="#" title="slw"><span><img src="slider/data1/tooltips/slw.jpg" alt="slw"/>5</span></a>
+	</div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">jquery slider</a> by WOWSlider.com v8.8</div>
+<div class="ws_shadow"></div>
+</div>	
+<script type="text/javascript" src="slider/engine1/wowslider.js"></script>
+<script type="text/javascript" src="slider/engine1/script.js"></script>
+<!-- End WOWSlider.com BODY section -->
+
+</div>
+
+<!--   bottom navigation  -->
+<div class="navbar" id="myNavbar">
+  <a href="contact.jsp">Contact</a>
+  <a href="#about">About</a>
+    <a href="#about">Complain</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myNavbar");
+    if (x.className === "navbar") {
+        x.className += " responsive";
+    } else {
+        x.className = "navbar";
+    }
+}
+</script>
+</body>
+</html>
